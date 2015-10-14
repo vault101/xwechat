@@ -2,7 +2,12 @@ from bottle import route, run, template
 
 @route('/')
 def index():
-    return "hello, world."
+    return template('index')
+
+
+@route('/search/<key>')
+def search(key):
+	return key
 
 
 if __name__ == '__main__':
