@@ -1,8 +1,14 @@
-from bottle import route, run, template
+from bottle import route, run, template, view, static_file
+
+
+@route('/static/<file_name>')
+def route_static_file(file_name):
+	return static_file(file_name, root='static/')
 
 @route('/')
+@view('index')
 def index():
-    return template('index')
+    return {}
 
 
 @route('/search/<key>')
