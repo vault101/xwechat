@@ -15,7 +15,7 @@
 	<i></i>
 	<div class="s-bar">
 	   <form action="/search" method="get">
-		<input type="text" name="key" value="type something for search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'type something for search';}">
+		<input type="text" name="key" placeholder="type something for search" />
 		<input type="submit" value="搜索" onclick="search()" />
 	  </form>
 	</div>
