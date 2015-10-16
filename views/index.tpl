@@ -1,22 +1,26 @@
-<!doctype html>
-<html lang="zh">
+<!DOCTYPE HTML>
+<html>
 <head>
-<meta charset="utf-8" />
-	<title>{{ title }}</title>
-	<link rel="stylesheet" type="text/css" href="static/css/index.css" />
+<title>{{ title }}</title> 
+<link href="/static/css/style.css" rel="stylesheet" type="text/css" media="all"/> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
+<meta name="keywords" content="wechat searcher" /> 
+<link href='/static/css/googlefont.css' rel='stylesheet' type='text/css'> 
 </head>
-
 <body> 
-		<div id="main">
-			<div id="logo">
-				xlzd
-			</div>
-
-			<div id="search">
-				<input type="text" name="key" id="key" /><br/>
-				<input type="button" name="search" id="search_btn" value="search"/>
-				<input type="button" name="search" id="lucky_btn" value="lucky"/>
-			</div>
-		</div> 
+<div class="search">
+	<i></i>
+	<div class="s-bar">
+	   <form>
+		<input type="text" value="type something for search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'type something for search';}">
+		<input type="submit"  value="搜索"/>
+	  </form>
+	</div>
+	<p>{{ description }}</p>
+</div> 
+<div class="copyright">
+	 <p>by <a href="http://xlzd.me" target="_blank">xlzd</a></p>
+</div>	
 </body>
 </html>

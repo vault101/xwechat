@@ -12,7 +12,10 @@ def route_static_file(tp, file_name):
 @route('/')
 @view('index')
 def index():
-    return {'title': 'title'}
+    return {
+        'title': 'title', 
+        'description': u'专栏作者；一个在80%情况下『理性、严谨、用数据说话』的技术宅。',
+    }
 
 
 @route('/search/<key>')
