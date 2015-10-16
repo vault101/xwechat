@@ -25,7 +25,9 @@ def index():
 @route('/search')
 def search():
     request_params = request.GET.decode('utf-8')
-    result = crawl(request_params.get("key"))
+    key = request_params.get("key")
+    # print key, type(key)
+    result = crawl(key)
     return json.dumps(result, ensure_ascii=False)
 
 

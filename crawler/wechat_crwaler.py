@@ -1,9 +1,12 @@
 #!/usr/bin/env python
 # encoding=utf-8
-import requests
-from bs4 import BeautifulSoup
 import re
 import time
+import urllib
+
+import requests
+
+from bs4 import BeautifulSoup
 
 unix_time_stamp_2_time_str = lambda stamp: time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(long(stamp[0])))
 
@@ -89,7 +92,6 @@ class WechatCrawler(object):
     def _crawl_article(self, key, page):
         try:
             soup = BeautifulSoup(self._get(self.SEARCH_URL.format(type='2', key=key, page=page)), "html.parser")
-            print 'aaa', soup
             lst = [self._parse_article(item) for item in soup.find_all('div', attrs={'class': self.ARTICLE_CLASS})]
             return filter(lambda x: x, lst)
         except Exception, e:
@@ -106,6 +108,7 @@ class WechatCrawler(object):
             return None
 
     def crawl(self, key, page=1):
+        key = urllib.quote(key.encode('gbk'))
         return [self._crawl_article(key, page), self._crawl_gzh(key, page)]
 
 
