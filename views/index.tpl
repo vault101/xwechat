@@ -3,6 +3,8 @@
 <head>
 <title>{{ title }}</title> 
 <link href="/static/css/style.css" rel="stylesheet" type="text/css" media="all"/> 
+<link rel="Shortcut Icon" href="http://7xkpi6.com1.z0.glb.clouddn.com/avatar.jpg" />
+<link rel="Bootmark" href="http://7xkpi6.com1.z0.glb.clouddn.com/avatar.jpg" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
 <meta name="keywords" content="wechat searcher" /> 
