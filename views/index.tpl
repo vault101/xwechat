@@ -12,9 +12,9 @@
 <div class="search">
 	<i></i>
 	<div class="s-bar">
-	   <form>
-		<input type="text" value="type something for search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'type something for search';}">
-		<input type="submit"  value="搜索"/>
+	   <form action="/search" method="get">
+		<input type="text" name="key" value="type something for search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'type something for search';}">
+		<input type="submit" value="搜索" onclick="search()" />
 	  </form>
 	</div>
 	<p>{{ description }}</p>
@@ -22,5 +22,7 @@
 <div class="copyright">
 	 <p>by <a href="http://xlzd.me" target="_blank">xlzd</a></p>
 </div>	
+<script type="text/javascript" src="http://7xldek.com1.z0.glb.clouddn.com/@/html/js/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/search.js"></script>
 </body>
 </html>

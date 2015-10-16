@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 #encoding=utf-8
 
-from bottle import route, run, template, view, static_file
+from bottle import route, run, template, view, static_file, request
 
 
 @route('/static/<tp>/<file_name>')
@@ -13,14 +13,15 @@ def route_static_file(tp, file_name):
 @view('index')
 def index():
     return {
-        'title': 'title', 
+        'title': '微信搜索器 － xlzd', 
         'description': u'专栏作者；一个在80%情况下『理性、严谨、用数据说话』的技术宅。',
     }
 
 
-@route('/search/<key>')
-def search(key):
-	return key
+@route('/search')
+def search():
+    request_params = request.GET.decode('utf-8')
+    return request_params.get("key")
 
 
 if __name__ == '__main__':
