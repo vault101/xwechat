@@ -31,6 +31,11 @@ def search():
     return json.dumps(result, ensure_ascii=False)
 
 
+@route('/gzh')
+def gzh():
+    pass
+
+
 if __name__ == '__main__':
     PORT = 9132
     WORKERS = 2
